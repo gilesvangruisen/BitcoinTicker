@@ -24,14 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD4F7C0413C30F9F00825C6E /* Popup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F7C0413C30F9F00825C6E /* BTCTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTCTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DD4F7C0C13C30F9F00825C6E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DD4F7C0D13C30F9F00825C6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Popup-Info.plist"; path = "Popup/Popup-Info.plist"; sourceTree = "<group>"; };
+		DD4F7C1013C30F9F00825C6E /* BTCTicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BTCTicker-Info.plist"; path = "Popup/BTCTicker-Info.plist"; sourceTree = "<group>"; };
 		DD4F7C1413C30F9F00825C6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popup-Prefix.pch"; sourceTree = "<group>"; };
+		DD4F7C1613C30F9F00825C6E /* BTCTicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTCTicker-Prefix.pch"; sourceTree = "<group>"; };
 		DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
 		DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
 		DD4F7C1E13C30F9F00825C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -71,14 +71,14 @@
 				DD4F7C2813C3123E00825C6E /* User Interface */,
 				DD4F7C0713C30F9F00825C6E /* Frameworks */,
 				DD4F7C0513C30F9F00825C6E /* Products */,
-				DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */,
+				DD4F7C1013C30F9F00825C6E /* BTCTicker-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		DD4F7C0513C30F9F00825C6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F7C0413C30F9F00825C6E /* Popup.app */,
+				DD4F7C0413C30F9F00825C6E /* BTCTicker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 		DD4F7C0F13C30F9F00825C6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */,
+				DD4F7C1613C30F9F00825C6E /* BTCTicker-Prefix.pch */,
 				DD4F7C1413C30F9F00825C6E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD4F7C0313C30F9F00825C6E /* Popup */ = {
+		DD4F7C0313C30F9F00825C6E /* BTCTicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "Popup" */;
+			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "BTCTicker" */;
 			buildPhases = (
 				DD4F7C0013C30F9F00825C6E /* Sources */,
 				DD4F7C0113C30F9F00825C6E /* Frameworks */,
@@ -184,9 +184,9 @@
 			);
 			dependencies = (
 			);
-			name = Popup;
+			name = BTCTicker;
 			productName = Popup;
-			productReference = DD4F7C0413C30F9F00825C6E /* Popup.app */;
+			productReference = DD4F7C0413C30F9F00825C6E /* BTCTicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,8 +196,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					DD4F7C0313C30F9F00825C6E = {
+						DevelopmentTeam = KN99CYC8WS;
+					};
+				};
 			};
-			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */;
+			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "BTCTicker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,7 +214,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD4F7C0313C30F9F00825C6E /* Popup */,
+				DD4F7C0313C30F9F00825C6E /* BTCTicker */,
 			);
 		};
 /* End PBXProject section */
@@ -319,11 +324,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
-				INFOPLIST_FILE = "Popup/Popup-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Popup/BTCTicker-Prefix.pch";
+				INFOPLIST_FILE = "Popup/BTCTicker-Info.plist";
+				PRODUCT_NAME = BTCTicker;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -332,11 +338,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
-				INFOPLIST_FILE = "Popup/Popup-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Popup/BTCTicker-Prefix.pch";
+				INFOPLIST_FILE = "Popup/BTCTicker-Info.plist";
+				PRODUCT_NAME = BTCTicker;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -344,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */ = {
+		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "BTCTicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD4F7C2013C30F9F00825C6E /* Debug */,
@@ -353,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "Popup" */ = {
+		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "BTCTicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD4F7C2313C30F9F00825C6E /* Debug */,

@@ -8,6 +8,8 @@
 @synthesize isHighlighted = _isHighlighted;
 @synthesize action = _action;
 @synthesize target = _target;
+@synthesize buyPrice = _buyPrice;
+@synthesize priceField = _priceField;
 
 #pragma mark -
 
@@ -15,8 +17,20 @@
 {
     CGFloat itemWidth = [statusItem length];
     CGFloat itemHeight = [[NSStatusBar systemStatusBar] thickness];
-    NSRect itemRect = NSMakeRect(0.0, 0.0, itemWidth, itemHeight);
+    NSRect itemRect = NSMakeRect(0.0, -2, itemWidth, itemHeight);
+    _priceField = [[NSTextField alloc] initWithFrame:itemRect];
+    _priceField.drawsBackground = NO;
+    _priceField.bezeled = NO;
+    [_priceField setSelectable:NO];
+    [_priceField setEditable:NO];
+    [[_priceField cell] setBackgroundStyle:NSBackgroundStyleRaised];
+    _priceField.font = [NSFont boldSystemFontOfSize:12];
+
+    [_priceField setAlignment:kCTTextAlignmentCenter];
+    
     self = [super initWithFrame:itemRect];
+    
+    [self addSubview:_priceField];
     
     if (self != nil) {
         _statusItem = statusItem;
@@ -25,21 +39,25 @@
     return self;
 }
 
-
 #pragma mark -
+
+- (void)setBuyPrice:(float)buyPrice {
+    _buyPrice = buyPrice;
+    
+    NSString *formattedNumber = [NSString stringWithFormat:@"%.02f", _buyPrice];
+    NSString *display = [NSString stringWithFormat:@"BTC ≈ %@", formattedNumber];
+    _priceField.stringValue = display;
+    NSUInteger length = [display length];
+    _buyPriceLength = (int)length;
+    [self needsDisplay];
+}
 
 - (void)drawRect:(NSRect)dirtyRect
 {
 	[self.statusItem drawStatusBarBackgroundInRect:dirtyRect withHighlight:self.isHighlighted];
-    
-    NSImage *icon = self.isHighlighted ? self.alternateImage : self.image;
-    NSSize iconSize = [icon size];
-    NSRect bounds = self.bounds;
-    CGFloat iconX = roundf((NSWidth(bounds) - iconSize.width) / 2);
-    CGFloat iconY = roundf((NSHeight(bounds) - iconSize.height) / 2);
-    NSPoint iconPoint = NSMakePoint(iconX, iconY);
+    _priceField.textColor = _isHighlighted ? [NSColor whiteColor] : [NSColor blackColor];
+    _priceField.frame = NSRectFromCGRect(CGRectMake(0, -2, (8*_buyPriceLength), [[NSStatusBar systemStatusBar] thickness]));
 
-	[icon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
 }
 
 #pragma mark -

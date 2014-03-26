@@ -17,5 +17,10 @@
 @property (nonatomic, readonly) NSRect globalRect;
 @property (nonatomic) SEL action;
 @property (nonatomic, unsafe_unretained) id target;
+@property (nonatomic) float buyPrice;
+@property (nonatomic) int buyPriceLength;
+@property (nonatomic, strong) NSTextField *priceField;
+
+- (void)setBuyPrice:(float)buyPrice;
 
 @end
